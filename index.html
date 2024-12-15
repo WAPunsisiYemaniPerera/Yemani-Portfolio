@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/fffd4efb08.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="nav">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-letter">Y</span>emani
+          <span class="logo-letter">P</span>erera
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="container home-container">
+        <div class="home-content">
+          <h1>Hi, I'm <span class="highlight">Yemani Perera</span></h1>
+          <p>An IT Undergraduate | Full Stack Developer</p>
+          <div class="social-links">
+            <a href="https://github.com/WAPunsisiYemaniPerera" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.instagram.com/yy_ee_mm_aa/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://web.facebook.com/punsisi.yemani" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+          <a href="#about" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="home-image">
+          <img src="images/p1.png" alt="Profile Picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img id="img2" src="images/p9.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello! I'm Yemani Perera, an IT undergraduate currently studying
+              for my BSc (Hons) in Information Technology at Horizon Campus in
+              Malabe. I am passionate about coding and skilled in several
+              programming languages, including C, Java, HTML, CSS, JavaScript,
+              PHP, and more. My ambition is to become a software engineer, where
+              I can apply my skills and creativity to build impactful solutions
+              in the tech world.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('background')">
+                🫴 Background
+              </p>
+              <p class="tab-links active-link" onclick="opentab('goals')">
+                🎯 Goals
+              </p>
+              <p class="tab-links active-link" onclick="opentab('interests')">
+                😋 Interests
+              </p>
+            </div>
+            <h2 id="active-tab-title" class="active-tab-title">🫴 Background</h2>
+            <!-- New Title -->
+            <div class="tab-contents" id="background">
+              <ul>
+                <li>
+                  Here are some fascinating insights into my personal journey
+                  and background!
+                </li>
+                <li><span>👧</span> Name: W.A.Punsisi Yemani Perera</li>
+                <li><span>🎂</span> Birthday: April 18</li>
+                <li><span>⚧️</span> Gender: Female</li>
+                <li><span>🏠️</span> Location: Malabe, Sri Lanka</li>
+                <li><span>🗣️</span> Communicate: English/Sinhala</li>
+              </ul>
+            </div>
+            <h2 id="active-tab-title" class="active-tab-title">🎯 Goals</h2>
+            <div class="tab-contents" id="goals">
+              <ul>
+                <li><span>🔧</span> Master: Full-stack development</li>
+                <li><span>🧠</span> Improve: Algorithms and data structures</li>
+                <li><span>💡</span> Explore: Cloud computing and DevOps</li>
+                <li>
+                  <span>🚀</span> Contribute: To open-source software and
+                  communities
+                </li>
+                <li><span>🔍</span> Learn: Machine learning basics</li>
+              </ul>
+            </div>
+            <h2 id="active-tab-title" class="active-tab-title">😋 Interests</h2>
+            <div class="tab-contents" id="interests">
+              <ul>
+                <li>
+                  <span>💼</span> Build: Professional network with developers
+                </li>
+                <li>
+                  <span>🌐</span> Experiment: With frameworks like React,
+                  Node.js, and Django
+                </li>
+                <li><span>📊</span> Analyze: Data and trends in tech</li>
+                <li><span>🛠️</span> Develop: Automation tools and scripts</li>
+                <li>
+                  <span>📅</span> Stay Updated: On industry trends and new
+                  technologies
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="skills-container">
+        <h2>My Skills</h2>
+        <p>Hover over each skill to see my proficiency.</p>
+        <div class="skills-grid">
+          <div class="skill" id="c-programming">
+            <p>C Programming</p>
+            <div class="progress-bar">
+              <div class="progress" id="c-programming-bar"></div>
+            </div>
+          </div>
+          <div class="skill" id="html-css-js">
+            <p>HTML, CSS, JavaScript</p>
+            <div class="progress-bar">
+              <div class="progress" id="html-css-js-bar"></div>
+            </div>
+          </div>
+          <div class="skill" id="java">
+            <p>Java</p>
+            <div class="progress-bar">
+              <div class="progress" id="java-bar"></div>
+            </div>
+          </div>
+          <div class="skill" id="mysql">
+            <p>MySQL</p>
+            <div class="progress-bar">
+              <div class="progress" id="mysql-bar"></div>
+            </div>
+          </div>
+          <div class="skill" id="php">
+            <p>PHP</p>
+            <div class="progress-bar">
+              <div class="progress" id="php-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Languages Section -->
+    <section id="tools-languages" class="tools-languages-section">
+      <h2>Tools & Languages</h2>
+      <div class="tools-container">
+        <i class="devicon-html5-plain colored"></i>
+        <i class="devicon-css3-plain colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-java-plain colored"></i>
+        <i class="devicon-php-plain colored"></i>
+        <i class="devicon-mysql-plain colored"></i>
+        <i class="devicon-c-plain colored"></i>
+        <i class="devicon-github-plain colored"></i>
+        <i class="devicon-git-plain colored"></i>
+        <i class="devicon-linux-plain colored"></i>
+        <i class="devicon-ubuntu-plain colored"></i>
+        <i class="devicon-figma-plain colored"></i>
+        <i class="devicon-sass-plain colored"></i>
+        <p>
+          I'm not a pro at any of these yet, but I'm learning step by step and
+          loving the journey! 💕
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="featured-projects">
+      <h2>Featured Projects</h2>
+      <p>Check out some of the projects I've worked on.</p>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="images/project1.png" alt="Portfolio" />
+          <h3>Portfolio</h3>
+          <p>
+            A personal project built with HTML, CSS, and JavaScript to showcase
+            my skills, projects, and interests, reflecting my journey as an IT
+            learner.
+          </p>
+          <a
+            href="https://github.com/WAPunsisiYemaniPerera/MiniProjectJavaNetbeans"
+            target="_blank"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/project2.png" alt="Restaurant" />
+          <h3>Restaurant Website</h3>
+          <p>
+            A group project developed with HTML, CSS, JavaScript, and PHP,
+            featuring menu display, online orders, and customer interaction for
+            a seamless experience.
+          </p>
+          <a
+            href="https://github.com/WAPunsisiYemaniPerera/Restaurant"
+            target="_blank"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/project3.png" alt="Vet" />
+          <h3>Veterinary Shop Management</h3>
+          <p>
+            A mini-project developed using Java Swing, MySQL, and JDBC under the
+            MVC architecture. This system integrates OOP concepts to manage
+            pets, owners, items, and billing with full CRUD functionality,
+            streamlining veterinary shop operations.
+          </p>
+          <a
+            href="https://lnkd.in/gKG6B2tk"
+            target="_blank"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/project4.png" alt="Calculator" />
+          <h3>Simple Calculator</h3>
+          <p>
+            A simple calculator built with Java in NetBeans, enabling basic
+            arithmetic operations through an intuitive interface while
+            demonstrating core Java concepts.
+          </p>
+          <a
+            href="https://github.com/WAPunsisiYemaniPerera/Simple-Calculator.git"
+            target="_blank"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="padding: 50px 0; color: #fff">
+      <div class="services-container">
+        <h1
+          class="sub-title"
+          style="
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            color: #00a8e8;
+          "
+        >
+          My Services
+        </h1>
+        <div class="services-columns">
+          <div class="service-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              We create visually stunning websites that engage your audience and
+              deliver great user experiences.
+            </p>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-palette"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Crafting intuitive and attractive designs to ensure smooth and
+              engaging user journeys.
+            </p>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h2>App Development</h2>
+            <p>
+              Developing high-performance mobile apps for Android and iOS
+              tailored to your business needs.
+            </p>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Left Section -->
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              wapunsisiyemani18@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +94 714 999 801</p>
+            <div class="social">
+              <a href="https://github.com/WAPunsisiYemaniPerera"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.instagram.com/yy_ee_mm_aa/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://web.facebook.com/punsisi.yemani"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa -twitter"></i></a>
+            </div>
+            <a href="./assets/YemaniCV.pdf" class="btn btn-primary"
+              >Download CV</a
+            >
+          </div>
+
+          <!-- Right Section -->
+          <div class="contact-right">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="contactForm"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="6de599d2-86c9-4e5d-93c3-96e6674425bb"
+              />
+              <input
+                type="text"
+                id="Name"
+                name="Name"
+                placeholder="Your Name"
+                class="contact-inputs"
+                required
+              />
+              <input
+                type="email"
+                id="Email"
+                name="Email"
+                placeholder="Your Email"
+                class="contact-inputs"
+                required
+              />
+              <input
+                type="text"
+                id="Subject"
+                name="Subject"
+                placeholder="Your Subject"
+                class="contact-inputs"
+                required
+              />
+              <textarea
+                id="Message"
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                class="contact-inputs"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="copyright">
+          <p>Copyright © 2024 Yemani Perera.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SweetAlert and SMTP.js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+      const burger = document.getElementById("burger");
+      const navLinks = document.getElementById("navLinks");
+      const links = document.querySelectorAll(".nav-links a");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("toggle");
+      });
+
+      // Close the menu when a link is clicked
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          burger.classList.remove("toggle");
+        });
+      });
+
+      // Animated text
+      document.addEventListener("DOMContentLoaded", function () {
+        const text = "Full Stack Developer";
+        const textElement = document.getElementById("animated-text");
+        let index = 0;
+
+        function type() {
+          if (index < text.length) {
+            textElement.textContent += text[index];
+            index++;
+            setTimeout(type, 100); // Adjust speed by changing 100ms
+          }
+        }
+
+        type();
+      });
+
+      //about section
+      function opentab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll(".tab-contents");
+        tabContents.forEach((content) => {
+          content.classList.remove("active-tab");
+        });
+
+        // Remove active class from all tab links
+        const tabLinks = document.querySelectorAll(".tab-links");
+        tabLinks.forEach((link) => {
+          link.classList.remove("active-link");
+        });
+
+        // Show the selected tab content
+        document.getElementById(tabName).classList.add("active-tab");
+
+        // Add active class to the clicked tab link
+        const activeLink = Array.from(tabLinks).find((link) =>
+          link.innerText.includes(tabName.charAt(0))
+        );
+        if (activeLink) {
+          activeLink.classList.add("active-link");
+        }
+
+        // Update the active tab title
+        const activeTabTitle = document.getElementById("active-tab-title");
+        activeTabTitle.textContent = activeLink.textContent.trim();
+      }
+
+      //skills
+      // Skills section progress bars
+      window.addEventListener("DOMContentLoaded", () => {
+        const skillsSection = document.getElementById("skills");
+        const progressBars = document.querySelectorAll(
+          ".progress-bar .progress"
+        );
+
+        const skillsData = {
+          "c-programming-bar": 95,
+          "html-css-js-bar": 90,
+          "java-bar": 90,
+          "mysql-bar": 90,
+          "php-bar": 89,
+        };
+
+        function handleProgressBars() {
+          if (isInViewport(skillsSection)) {
+            skillsSection.classList.add("visible");
+
+            progressBars.forEach((bar) => {
+              const skillId = bar.id;
+              const percentage = skillsData[skillId];
+              if (percentage) {
+                bar.style.transition = "width 2s ease"; // Smooth transition
+                bar.style.width = percentage + "%"; // Set the width dynamically based on the data
+              }
+            });
+          } else {
+            skillsSection.classList.remove("visible");
+            progressBars.forEach((bar) => {
+              bar.style.width = "0%"; // Reset the width to 0% when out of view
+            });
+          }
+        }
+
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        window.addEventListener("scroll", handleProgressBars);
+        handleProgressBars(); // Initial check
+      });
+    </script>
+  </body>
+</html>
