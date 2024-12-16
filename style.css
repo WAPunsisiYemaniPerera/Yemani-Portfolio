@@ -17,7 +17,7 @@
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  width: 100%;
+  width: 105%;
   overflow-x: hidden; /* Prevent horizontal overflow */
   background-color: var(--light-color);
   color: var(--dark-color);
@@ -608,105 +608,107 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container {
-    width: 100%; /* Change to 100% for mobile responsiveness */
-    padding: 0; /* Adjust padding for smaller screens */
-    padding-top: 41px;
-  }
+  @media (max-width: 576px) {
+    .container {
+      width: 100%; /* Change to 100% for mobile responsiveness */
+      padding: 0; /* Adjust padding for smaller screens */
+      padding-top: 41px;
+    }
 
-  .burger {
-    display: flex;
-  }
+    .burger {
+      display: flex;
+    }
 
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: var(--primary-color);
-    align-items: center;
-    justify-content: center;
-    transform: translateX(100%);
-    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    padding: 15px 0;
-  }
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: var(--primary-color);
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      box-shadow: -3px 0 5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      padding: 15px 0;
+    }
 
-  .nav-links.active {
-    transform: translateX(0);
-  }
+    .nav-links.active {
+      transform: translateX(0);
+    }
 
-  .nav-links li {
-    margin: 10px 0;
-  }
+    .nav-links li {
+      margin: 10px 0;
+    }
 
-  .logo {
-    font-size: 25px;
-  }
+    .logo {
+      font-size: 25px;
+    }
 
-  .home {
-    height: auto; /* Allow height to adjust */
-    padding: 50px 20px; /* Adjust padding for mobile */
-  }
+    .home {
+      height: auto; /* Allow height to adjust */
+      padding: 50px 20px; /* Adjust padding for mobile */
+    }
 
-  .home-content h1 {
-    font-size: 22px;
-  }
+    .home-content h1 {
+      font-size: 22px;
+    }
 
-  .home-content p {
-    font-size: 13px;
-  }
+    .home-content p {
+      font-size: 13px;
+    }
 
-  .social-links a {
-    font-size: 20px;
-  }
+    .social-links a {
+      font-size: 20px;
+    }
 
-  .btn-primary {
-    padding: 5px 9px;
-    margin-top: -9px;
-  }
+    .btn-primary {
+      padding: 5px 9px;
+      margin-top: -9px;
+    }
 
-  .home-image img {
-    max-width: 122%; /* Ensure image fits within container */
-    height: auto;
-  }
+    .home-image img {
+      max-width: 122%; /* Ensure image fits within container */
+      height: auto;
+    }
 
-  #about {
-    margin-top: -161px; /* Adjust this value to bring the About section closer */
-    padding: 20px 0; /* Optional: Adjust padding if needed */
-  }
+    #about {
+      margin-top: -161px; /* Adjust this value to bring the About section closer */
+      padding: 20px 0; /* Optional: Adjust padding if needed */
+    }
 
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%; /* Ensure columns take full width */
-    padding: 20px;
-  }
+    .about-col-1,
+    .about-col-2 {
+      flex-basis: 100%; /* Ensure columns take full width */
+      padding: 20px;
+    }
 
-  .skills-grid {
-    grid-template-columns: 1fr; /* 1 column for small screens */
-  }
+    .skills-grid {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+    }
 
-  .project-card {
-    width: 100%; /* Full width for small screens */
-    margin: 0 auto; /* Center the card */
-  }
+    .project-card {
+      width: 100%; /* Full width for small screens */
+      margin: 0 auto; /* Center the card */
+    }
 
-  .projects-container {
-    grid-template-columns: 1fr; /* Stack cards in a single column */
-  }
+    .projects-container {
+      grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
 
-  .contact-left,
-  .contact-right {
-    flex-basis: 100%;
-  }
+    .contact-left,
+    .contact-right {
+      flex-basis: 100%;
+    }
 
-  .contact-right {
-    padding-top: 22px;
-  }
+    .contact-right {
+      padding-top: 22px;
+    }
 
-  .copyright {
-    font-size: 14px;
+    .copyright {
+      font-size: 14px;
+    }
   }
 }
