@@ -686,6 +686,10 @@ body {
       padding: 20px;
     }
 
+    .about-col-1 img {
+      width: 68%;
+    }
+
     .skills-grid {
       grid-template-columns: 1fr; /* 1 column for small screens */
     }
