@@ -53,6 +53,8 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  background-color: rgba(7, 40, 53, 0.9);
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li {
@@ -68,15 +70,25 @@ body {
 }
 
 .logo {
-  font-size: 30px; /* Adjusted logo size */
+  font-size: 25px; /* Adjusted logo size */
   font-weight: 200;
   color: #3498db;
+}
+
+.logo-letter {
+  color: #e74c3c;
+  font-weight: 400;
+}
+.nav-links.active {
+  transform: translateX(0);
+  background-color: rgba(7, 40, 53, 0.9); /* Keep it transparent */
 }
 
 .burger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .burger div {
@@ -189,6 +201,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  text-align: center;
 }
 
 .row {
@@ -252,10 +265,10 @@ body {
 
 .tab-links {
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 8px 13px;
   border: 1px solid transparent; /* Optional: Add border for better visibility */
-  border-radius: 5px; /* Optional: Rounded corners */
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 24px; /* Optional: Rounded corners */
+  transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
 }
 
 .tab-links.active-link {
@@ -263,6 +276,7 @@ body {
     --accent-color
   ); /* Change this to your desired highlight color */
   color: white; /* Change text color for better contrast */
+  text-decoration: underline;
 }
 
 .tab-contents {
@@ -626,7 +640,7 @@ body {
       top: 0;
       height: 100vh;
       width: 100%;
-      background-color: var(--primary-color);
+      background-color: rgba(7, 40, 53, 0.9);
       align-items: center;
       justify-content: center;
       transform: translateX(100%);
@@ -658,7 +672,7 @@ body {
     }
 
     .home-content p {
-      font-size: 13px;
+      font-size: 15px;
     }
 
     .social-links a {
@@ -688,6 +702,10 @@ body {
 
     .about-col-1 img {
       width: 68%;
+    }
+
+    .about-col-2 h1 {
+      margin-top: -34px;
     }
 
     .skills-grid {

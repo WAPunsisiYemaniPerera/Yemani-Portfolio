@@ -46,6 +46,9 @@
           <p>An IT Undergraduate | Full Stack Developer</p>
           <div class="social-links">
             <a href="https://github.com/WAPunsisiYemaniPerera" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/WAPunsisiYemaniPerera" target="_blank"
               ><i class="fab fa-github"></i
             ></a>
             <a href="https://www.instagram.com/yy_ee_mm_aa/" target="_blank"
@@ -82,18 +85,17 @@
               in the tech world.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('background')">
+              <button class="btn btn-primary" onclick="opentab('background')">
                 🫴 Background
-              </p>
-              <p class="tab-links active-link" onclick="opentab('goals')">
+              </button>
+              <button class="btn btn-primary" onclick="opentab('goals')">
                 🎯 Goals
-              </p>
-              <p class="tab-links active-link" onclick="opentab('interests')">
+              </button>
+              <button class="btn btn-primary" onclick="opentab('interests')">
                 😋 Interests
-              </p>
+              </button>
             </div>
-            <h2 id="active-tab-title" class="active-tab-title">🫴 Background</h2>
-            <!-- New Title -->
+
             <div class="tab-contents" id="background">
               <ul>
                 <li>
@@ -107,7 +109,6 @@
                 <li><span>🗣️</span> Communicate: English/Sinhala</li>
               </ul>
             </div>
-            <h2 id="active-tab-title" class="active-tab-title">🎯 Goals</h2>
             <div class="tab-contents" id="goals">
               <ul>
                 <li><span>🔧</span> Master: Full-stack development</li>
@@ -120,7 +121,6 @@
                 <li><span>🔍</span> Learn: Machine learning basics</li>
               </ul>
             </div>
-            <h2 id="active-tab-title" class="active-tab-title">😋 Interests</h2>
             <div class="tab-contents" id="interests">
               <ul>
                 <li>
@@ -447,7 +447,8 @@
         type();
       });
 
-      //about section
+      //about
+      // Function to open the selected tab
       function opentab(tabName) {
         // Hide all tab contents
         const tabContents = document.querySelectorAll(".tab-contents");
@@ -462,21 +463,31 @@
         });
 
         // Show the selected tab content
-        document.getElementById(tabName).classList.add("active-tab");
+        const selectedTabContent = document.getElementById(tabName);
+        if (selectedTabContent) {
+          selectedTabContent.classList.add("active-tab");
+        }
 
         // Add active class to the clicked tab link
-        const activeLink = Array.from(tabLinks).find((link) =>
-          link.innerText.includes(tabName.charAt(0))
-        );
+        const activeLink = Array.from(tabLinks).find((link) => {
+          return link.innerText.includes(tabName.charAt(0)); // Match based on the first character
+        });
+
         if (activeLink) {
           activeLink.classList.add("active-link");
         }
 
-        // Update the active tab title
+        // Update the active tab title (if needed)
         const activeTabTitle = document.getElementById("active-tab-title");
-        activeTabTitle.textContent = activeLink.textContent.trim();
+        activeTabTitle.textContent = activeLink
+          ? activeLink.textContent.trim()
+          : "";
       }
 
+      // Initialize the first tab as active on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        opentab("background"); // Set the default active tab
+      });
       //skills
       // Skills section progress bars
       window.addEventListener("DOMContentLoaded", () => {
