@@ -17,7 +17,7 @@
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  width: 105%;
+  width: auto;
   overflow-x: hidden; /* Prevent horizontal overflow */
   background-color: var(--light-color);
   color: var(--dark-color);
@@ -70,18 +70,52 @@ body {
 }
 
 .logo {
-  font-size: 25px; /* Adjusted logo size */
-  font-weight: 200;
+  font-size: 30px; /* Adjusted logo size */
+  font-weight: 500;
   color: #3498db;
+}
+
+.logo-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the current text color */
+  font-weight: bold; /* Make the text bold (optional) */
+}
+
+.logo-link:hover {
+  color: white; /* Change color on hover (optional) */
 }
 
 .logo-letter {
   color: #e74c3c;
   font-weight: 400;
 }
+
+.nav-links-icons i {
+  font-size: 24px; /* Adjust the size as needed */
+  line-height: 1; /* Ensure consistent vertical alignment */
+  color: var(--accent-color);
+}
 .nav-links.active {
   transform: translateX(0);
   background-color: rgba(7, 40, 53, 0.9); /* Keep it transparent */
+}
+
+.nav-links-icons {
+  display: flex; /* Use flexbox to align items in a row */
+  align-items: center;
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  color: var(--accent-color);
+}
+
+.nav-links-icons li {
+  margin-right: 15px; /* Add space between icons */
+  color: var(--accent-color);
+}
+
+.nav-links-icons li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
 }
 
 .burger {
@@ -182,7 +216,7 @@ body {
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: white;
+  color: black;
 }
 
 .btn-primary:hover {
@@ -281,6 +315,17 @@ body {
 
 .tab-contents {
   display: none; /* Hide all tab contents by default */
+  text-align: left; /* Align text to the left */
+  margin-top: 10px;
+}
+
+.tab-contents ul {
+  padding-left: 20px; /* Optional: Add padding to the left for the list */
+}
+
+.tab-contents li {
+  margin-bottom: 5px; /* Optional: Add space between list items */
+  color: white;
 }
 
 .tab-contents.active-tab {
@@ -349,7 +394,7 @@ body {
 
 .progress {
   height: 100%;
-  background-color: #00a8e8;
+  background-color: #e74c3c;
   transition: width 0.3s ease;
 }
 
@@ -537,22 +582,29 @@ body {
   align-items: center; /* Center align items */
 }
 
-.contact-left,
-.contact-right {
-  flex-basis: 100%; /* Full width for mobile */
-  text-align: center; /* Center text for better appearance */
+.contact-left {
+  flex-basis: 40%;
+  /*text-align: center; /* Center text for better appearance */
   margin-bottom: 20px; /* Add margin for spacing */
+  justify-content: center;
+}
+.contact-right {
+  flex-basis: 60%;
+  /*text-align: center; /* Center text for better appearance */
+  margin-bottom: 20px; /* Add margin for spacing */
+  justify-content: center;
 }
 
 .contact-left h1 {
-  font-size: 28px; /* Adjusted font size for mobile */
+  font-size: 36px; /* Adjusted font size for mobile */
   margin-bottom: 15px;
   color: #3498db;
+  /*text-align: center; */
 }
 
 .contact-left p {
   margin: 10px 0;
-  font-size: 16px; /* Adjusted font size for mobile */
+  font-size: 18px; /* Adjusted font size for mobile */
   color: white;
 }
 
@@ -562,7 +614,7 @@ body {
 
 .contact-left .social a {
   margin-right: 15px;
-  font-size: 24px;
+  font-size: 30px;
   color: #ababab;
   transition: color 0.3s ease;
 }
